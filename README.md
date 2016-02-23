@@ -1,5 +1,7 @@
 # starterApp
 
+The Angular Material Design starter project rewritten to make use of the Yeoman build tools. You could use this as a starting point for your own Angular Material Design project but have it built and ready for professional deployment.
+
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.14.0.
 

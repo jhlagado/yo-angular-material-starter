@@ -35,9 +35,11 @@ module.exports = function(config) {
       'bower_components/angular-material/angular-material.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
-      "app/scripts/**/*.js",
-      "test/mock/**/*.js",
-      "test/spec/**/*.js"
+     "app/scripts/users/Users.js",
+     "app/scripts/users/UserService.js",
+     "app/scripts/users/UserController.js",
+     "app/scripts/app.js",
+     "test/unit/**/*.js",
     ],
 
     // list of files / patterns to exclude
