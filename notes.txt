@@ -45,3 +45,7 @@ bower update
 To update index.html to reflect these new bower modules run: 
 grunt serve 
 
+ISSUE:
+
+Getting protractor running for end-to-end testing
+https://www.credera.com/blog/technology-insights/java/testing-angularjs-part-4-setting-e2e-testing-protractor/
