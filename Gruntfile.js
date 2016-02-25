@@ -157,6 +157,8 @@ module.exports = function(grunt) {
         
         // Empties folders to start fresh
         clean: {
+    	    options: { force: true },
+
             dist: {
                 files: [{
                     dot: true,
@@ -465,7 +467,7 @@ module.exports = function(grunt) {
         protractor: {
             options: {
                 // Location of your protractor config file
-                configFile: "test/protractor.conf.js",
+                configFile: 'test/protractor.conf.js',
                 
                 // Do you want the output to use fun colors?
                 noColor: false,

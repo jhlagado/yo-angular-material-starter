@@ -1,11 +1,36 @@
 Issues with Yeoman installation
 
-PROBLEM: 
-grunt build: Couldn't run compass
-had an error related to version of Ruby
+PROBLEM:
+Need the most recent‌ install of Node & NPM
 
 SOLUTION:
-sudo apt-get install ruby-compass
+curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+PROBLEM:
+install yeoman globally
+
+SOLUTION:
+npm install -g yo
+
+PROBLEM:
+Install npm packages globally without sudo on OS X and Linux
+
+SOLUTION:
+https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
+
+PROBLEM:
+run npm modules locally e.g. bower
+
+SOLUTION:
+put ./node_modules/.bin in $PATH 
+e.g. in .bashrc
+
+PROBLEM:
+need to install grunt globally
+
+SOLUTION:
+npm install -g grunt-cli
 
 PROBLEM: 
 grunt build: Couldn't run imagemin 
@@ -47,5 +72,34 @@ grunt serve
 
 ISSUE:
 
-Getting protractor running for end-to-end testing
-https://www.credera.com/blog/technology-insights/java/testing-angularjs-part-4-setting-e2e-testing-protractor/
+Getting protractor running for end-to-end (e2e) testing
+# Install protractor
+npm install protractor --save-dev
+ 
+# Download the selenium standalone server
+./node_modules/protractor/bin/webdriver-manager update
+
+see: https://www.credera.com/blog/technology-insights/java/testing-angularjs-part-4-setting-e2e-testing-protractor/
+
+===
+
+PROBLEM: 
+grunt build: Couldn't run compass
+had an error related to version of Ruby
+SOLUTION:
+on Ubuntu this worked
+
+sudo apt-get install ruby-compass
+
+on Mint this workedihad an error because it couldn't build native extentions
+
+this worked:
+sudo apt-get install ruby-dev
+sudo gem install compass
+ 
+
+
+
+install yeoman angular
+npm install -g grunt-cli bower yo generator-karma generator-angular
+

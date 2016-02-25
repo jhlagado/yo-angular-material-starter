@@ -20,7 +20,7 @@ angular
 'ngMaterial', 
 'users',
 ])
-.config(function($routeProvider) {
+.config(function() {
 //     $routeProvider
 //     .when('/', {
 //         templateUrl: 'views/main.html',
