@@ -1,41 +1,34 @@
 Issues with Yeoman installation
 
-PROBLEM:
+ISSUE:
 Need the most recent‌ install of Node & NPM
 
-SOLUTION:
+
 curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
-PROBLEM:
-install yeoman globally
+ISSUE:
+Install npm packages globally without sudo
 
-SOLUTION:
-npm install -g yo
 
-PROBLEM:
-Install npm packages globally without sudo on OS X and Linux
+edit .bashrc
 
-SOLUTION:
-https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
+NPM_PACKAGES="${HOME}/.npm-packages"
+PATH="$NPM_PACKAGES/bin:$PATH"
+export PATH
 
-PROBLEM:
-run npm modules locally e.g. bower
+see: https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
 
-SOLUTION:
-put ./node_modules/.bin in $PATH 
-e.g. in .bashrc
+ISSUE:
+globally install yeoman tools (including angular and karma generators) 
 
-PROBLEM:
-need to install grunt globally
 
-SOLUTION:
-npm install -g grunt-cli
+npm install -g grunt-cli bower yo generator-karma generator-angular
 
-PROBLEM: 
+ISSUE: 
 grunt build: Couldn't run imagemin 
 
-SOLUTION:
+
 Reverted imagemin to version 0.9
 npm cache clean && npm install grunt-contrib-imagemin@0.9.1
 
@@ -44,13 +37,13 @@ OR:
 add the following to the devDependencies section of package.json
 "grunt-contrib-imagemin": "1.0.0"
 "vinyl-fs": "2.3.1"
-remove node-modules (maybe juse clear npm cache?)
+remove node-modules (maybe just clear npm cache?)
 npm install
 
-PROBLEM: 
+ISSUE: 
 grunt test: Couldn't run Karma with grunt test
 
-SOLUTION:
+
 Reinstalled Karma
 npm install grunt-karma karma karma-phantomjs-launcher karma-jasmine jasmine-core phantomjs-prebuilt --save-dev
 
@@ -67,12 +60,12 @@ grunt build
 Update packages, use:
 bower update
 
-To update index.html to reflect these new bower modules run: 
-grunt serve 
+To update index.html to reflect these new bower modules run: grunt  
 
 ISSUE:
 
 Getting protractor running for end-to-end (e2e) testing
+
 # Install protractor
 npm install protractor --save-dev
  
@@ -81,25 +74,18 @@ npm install protractor --save-dev
 
 see: https://www.credera.com/blog/technology-insights/java/testing-angularjs-part-4-setting-e2e-testing-protractor/
 
-===
-
-PROBLEM: 
+ISSUE: 
 grunt build: Couldn't run compass
 had an error related to version of Ruby
-SOLUTION:
+
 on Ubuntu this worked
 
 sudo apt-get install ruby-compass
 
-on Mint this workedihad an error because it couldn't build native extentions
+on Mint this worked I had an error because it couldn't build native extentions
 
 this worked:
 sudo apt-get install ruby-dev
 sudo gem install compass
  
-
-
-
-install yeoman angular
-npm install -g grunt-cli bower yo generator-karma generator-angular
 
